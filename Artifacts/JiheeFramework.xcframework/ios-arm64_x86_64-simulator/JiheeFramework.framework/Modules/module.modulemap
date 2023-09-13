@@ -1,0 +1,11 @@
+framework module JiheeFramework {
+  umbrella header "JiheeFramework.h"
+
+  export *
+  module * { export * }
+}
+
+module JiheeFramework.Swift {
+  header "JiheeFramework-Swift.h"
+  requires objc
+}

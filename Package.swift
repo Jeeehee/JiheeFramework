@@ -5,11 +5,12 @@ import PackageDescription
 
 let package = Package(
     name: "JiheePackage",
+    platforms: [.iOS(.v13)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "JiheePackage",
-            targets: ["JiheePackage"]),
+            targets: ["JiheePackage", "JiheeFramework"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -24,5 +25,9 @@ let package = Package(
         .testTarget(
             name: "JiheePackageTests",
             dependencies: ["JiheePackage"]),
+        .binaryTarget(
+            name: "JiheeFramework",
+            path: "Artifacts/JiheeFramework.xcframework")
     ]
 )
+
