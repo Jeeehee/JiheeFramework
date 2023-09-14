@@ -1,8 +1,6 @@
+import UIKit
 import JiheeFramework
 
-public struct JiheePackage {
-    public private(set) var text = "Hello, World!"
-
-    public init() {
-    }
+public func getPaddingLabel(text: String, padding: UIEdgeInsets = .init(top: 5, left: 15, bottom: 5, right: 15)) -> PaddingLabel {
+    return makePaddingLabel(text: text, padding: padding)
 }
